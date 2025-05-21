@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: grpc-sidecar-demo
+spec:
+  containers:
+  - name: app
+    image: your-app-image
+  - name: sidecar
+    image: your-sidecar-image
+    ports:
+    - containerPort: 50051

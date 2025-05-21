@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package grpcapi;
+
+option go_package = "pkg/grpcapi";
+
+service SidecarService {
+  rpc RouteRequest (RouteRequestRequest) returns (RouteResponse);
+}
+
+message RouteRequestRequest {
+  string service_name = 1;
+}
+
+message RouteResponse {
+  string backend = 1;
+}
