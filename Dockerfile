@@ -8,6 +8,5 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o sidecar ./cmd/sidecar
 FROM alpine:latest
 WORKDIR /root/
 COPY --from=builder /app/sidecar .
-COPY --from=builder /app/model.json . 
 EXPOSE 50051
 CMD ["./sidecar"]
