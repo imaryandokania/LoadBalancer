@@ -1,7 +1,7 @@
 # LoadBalancer
 
 ## Client
-![Client](image-3.png)
+![Client](image-4.png)
 
 ## Server
 ![Server](image-2.png)
